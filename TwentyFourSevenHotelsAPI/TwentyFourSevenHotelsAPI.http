@@ -1,0 +1,6 @@
+@TwentyFourSevenHotelsAPI_HostAddress = http://localhost:5193
+
+GET {{TwentyFourSevenHotelsAPI_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
