@@ -9,6 +9,7 @@ builder.Services.AddSwaggerGen();
 builder.Services.AddDbContext<HotelDbContext>();
 builder.Services.AddControllers();
 
+// Not safe, only for development purposes
 builder.Services.AddCors(options => options.AddPolicy("Everything", policy =>
 {
     policy

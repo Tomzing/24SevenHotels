@@ -13,10 +13,10 @@ public class Room
     public int PricePerNight { get; set; }
 
     [Required]
-    public bool NeedsCleaning { get; set; }
+    public bool NeedsCleaning { get; set; } = false;
 
     [Required]
-    public bool OutstandingRepairs { get; set; }
+    public bool OutstandingRepairs { get; set; } = false;
 
 
 

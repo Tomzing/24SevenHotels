@@ -1,0 +1,12 @@
+h1 {
+
+}
+
+.bookingform-input {
+    min-width: 150px;
+}
+
+.bookingform-list-content-container {
+    display: flex;
+    justify-content: space-between;
+}

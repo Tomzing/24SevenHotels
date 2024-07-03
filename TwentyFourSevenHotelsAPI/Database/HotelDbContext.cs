@@ -17,23 +17,20 @@ public class HotelDbContext : DbContext
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
         base.OnModelCreating(modelBuilder);
-        // Configure Booking
         modelBuilder.Entity<Booking>()
             .HasOne(b => b.Room)
             .WithMany()
             .HasForeignKey(b => b.RoomId)
-            .OnDelete(DeleteBehavior.Restrict); // Prevent cascading deletes for Room
+            .OnDelete(DeleteBehavior.Restrict);
         modelBuilder.Entity<Booking>()
             .HasOne(b => b.Guest)
             .WithMany()
             .HasForeignKey(b => b.GuestId)
-            .OnDelete(DeleteBehavior.Restrict); // Prevent cascading deletes for Guest
-        // Configure Room
+            .OnDelete(DeleteBehavior.Restrict);
         modelBuilder.Entity<Room>()
             .HasOne(r => r.RoomType)
             .WithMany()
             .HasForeignKey(r => r.RoomTypeId)
-            .OnDelete(DeleteBehavior.Restrict); // Prevent cascading deletes for RoomType
-        // Additional configurations if necessary
+            .OnDelete(DeleteBehavior.Restrict);
     }
 }

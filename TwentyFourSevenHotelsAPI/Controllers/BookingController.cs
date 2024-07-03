@@ -33,6 +33,8 @@ public class BookingsController : ControllerBase
         {
             return Conflict("The room is already booked during the requested timeslot.");
         }
+
+        // TODO: Should refuse booking if the room is in need of repairs
         
         // Add the new booking to the context
         _context.Bookings.Add(booking);
